@@ -11,7 +11,19 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as GamesRouteImport } from './routes/games'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GamesShankarRouteImport } from './routes/games/shankar'
+import { Route as GamesRevanRouteImport } from './routes/games/revan'
+import { Route as GamesNathanRouteImport } from './routes/games/nathan'
+import { Route as GamesLucasTaiRouteImport } from './routes/games/lucas-tai'
+import { Route as GamesKiaanRouteImport } from './routes/games/kiaan'
+import { Route as GamesCharlieRouteImport } from './routes/games/charlie'
+import { Route as GamesCadenRouteImport } from './routes/games/caden'
+import { Route as GamesArjunNipaneRouteImport } from './routes/games/arjun-nipane'
+import { Route as GamesAriyaRouteImport } from './routes/games/ariya'
+import { Route as GamesArihaRouteImport } from './routes/games/ariha'
+import { Route as GamesAndrewRouteImport } from './routes/games/andrew'
 import { Route as GamesAdeleRouteImport } from './routes/games/adele'
+import { Route as GamesAbeRouteImport } from './routes/games/abe'
 
 const GamesRoute = GamesRouteImport.update({
   id: '/games',
@@ -23,34 +35,176 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GamesShankarRoute = GamesShankarRouteImport.update({
+  id: '/shankar',
+  path: '/shankar',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesRevanRoute = GamesRevanRouteImport.update({
+  id: '/revan',
+  path: '/revan',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesNathanRoute = GamesNathanRouteImport.update({
+  id: '/nathan',
+  path: '/nathan',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesLucasTaiRoute = GamesLucasTaiRouteImport.update({
+  id: '/lucas-tai',
+  path: '/lucas-tai',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesKiaanRoute = GamesKiaanRouteImport.update({
+  id: '/kiaan',
+  path: '/kiaan',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesCharlieRoute = GamesCharlieRouteImport.update({
+  id: '/charlie',
+  path: '/charlie',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesCadenRoute = GamesCadenRouteImport.update({
+  id: '/caden',
+  path: '/caden',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesArjunNipaneRoute = GamesArjunNipaneRouteImport.update({
+  id: '/arjun-nipane',
+  path: '/arjun-nipane',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesAriyaRoute = GamesAriyaRouteImport.update({
+  id: '/ariya',
+  path: '/ariya',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesArihaRoute = GamesArihaRouteImport.update({
+  id: '/ariha',
+  path: '/ariha',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesAndrewRoute = GamesAndrewRouteImport.update({
+  id: '/andrew',
+  path: '/andrew',
+  getParentRoute: () => GamesRoute,
+} as any)
 const GamesAdeleRoute = GamesAdeleRouteImport.update({
   id: '/adele',
   path: '/adele',
+  getParentRoute: () => GamesRoute,
+} as any)
+const GamesAbeRoute = GamesAbeRouteImport.update({
+  id: '/abe',
+  path: '/abe',
   getParentRoute: () => GamesRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/games': typeof GamesRouteWithChildren
+  '/games/abe': typeof GamesAbeRoute
   '/games/adele': typeof GamesAdeleRoute
+  '/games/andrew': typeof GamesAndrewRoute
+  '/games/ariha': typeof GamesArihaRoute
+  '/games/ariya': typeof GamesAriyaRoute
+  '/games/arjun-nipane': typeof GamesArjunNipaneRoute
+  '/games/caden': typeof GamesCadenRoute
+  '/games/charlie': typeof GamesCharlieRoute
+  '/games/kiaan': typeof GamesKiaanRoute
+  '/games/lucas-tai': typeof GamesLucasTaiRoute
+  '/games/nathan': typeof GamesNathanRoute
+  '/games/revan': typeof GamesRevanRoute
+  '/games/shankar': typeof GamesShankarRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/games': typeof GamesRouteWithChildren
+  '/games/abe': typeof GamesAbeRoute
   '/games/adele': typeof GamesAdeleRoute
+  '/games/andrew': typeof GamesAndrewRoute
+  '/games/ariha': typeof GamesArihaRoute
+  '/games/ariya': typeof GamesAriyaRoute
+  '/games/arjun-nipane': typeof GamesArjunNipaneRoute
+  '/games/caden': typeof GamesCadenRoute
+  '/games/charlie': typeof GamesCharlieRoute
+  '/games/kiaan': typeof GamesKiaanRoute
+  '/games/lucas-tai': typeof GamesLucasTaiRoute
+  '/games/nathan': typeof GamesNathanRoute
+  '/games/revan': typeof GamesRevanRoute
+  '/games/shankar': typeof GamesShankarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/games': typeof GamesRouteWithChildren
+  '/games/abe': typeof GamesAbeRoute
   '/games/adele': typeof GamesAdeleRoute
+  '/games/andrew': typeof GamesAndrewRoute
+  '/games/ariha': typeof GamesArihaRoute
+  '/games/ariya': typeof GamesAriyaRoute
+  '/games/arjun-nipane': typeof GamesArjunNipaneRoute
+  '/games/caden': typeof GamesCadenRoute
+  '/games/charlie': typeof GamesCharlieRoute
+  '/games/kiaan': typeof GamesKiaanRoute
+  '/games/lucas-tai': typeof GamesLucasTaiRoute
+  '/games/nathan': typeof GamesNathanRoute
+  '/games/revan': typeof GamesRevanRoute
+  '/games/shankar': typeof GamesShankarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/games' | '/games/adele'
+  fullPaths:
+    | '/'
+    | '/games'
+    | '/games/abe'
+    | '/games/adele'
+    | '/games/andrew'
+    | '/games/ariha'
+    | '/games/ariya'
+    | '/games/arjun-nipane'
+    | '/games/caden'
+    | '/games/charlie'
+    | '/games/kiaan'
+    | '/games/lucas-tai'
+    | '/games/nathan'
+    | '/games/revan'
+    | '/games/shankar'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/games' | '/games/adele'
-  id: '__root__' | '/' | '/games' | '/games/adele'
+  to:
+    | '/'
+    | '/games'
+    | '/games/abe'
+    | '/games/adele'
+    | '/games/andrew'
+    | '/games/ariha'
+    | '/games/ariya'
+    | '/games/arjun-nipane'
+    | '/games/caden'
+    | '/games/charlie'
+    | '/games/kiaan'
+    | '/games/lucas-tai'
+    | '/games/nathan'
+    | '/games/revan'
+    | '/games/shankar'
+  id:
+    | '__root__'
+    | '/'
+    | '/games'
+    | '/games/abe'
+    | '/games/adele'
+    | '/games/andrew'
+    | '/games/ariha'
+    | '/games/ariya'
+    | '/games/arjun-nipane'
+    | '/games/caden'
+    | '/games/charlie'
+    | '/games/kiaan'
+    | '/games/lucas-tai'
+    | '/games/nathan'
+    | '/games/revan'
+    | '/games/shankar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -74,6 +228,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/games/shankar': {
+      id: '/games/shankar'
+      path: '/shankar'
+      fullPath: '/games/shankar'
+      preLoaderRoute: typeof GamesShankarRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/revan': {
+      id: '/games/revan'
+      path: '/revan'
+      fullPath: '/games/revan'
+      preLoaderRoute: typeof GamesRevanRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/nathan': {
+      id: '/games/nathan'
+      path: '/nathan'
+      fullPath: '/games/nathan'
+      preLoaderRoute: typeof GamesNathanRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/lucas-tai': {
+      id: '/games/lucas-tai'
+      path: '/lucas-tai'
+      fullPath: '/games/lucas-tai'
+      preLoaderRoute: typeof GamesLucasTaiRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/kiaan': {
+      id: '/games/kiaan'
+      path: '/kiaan'
+      fullPath: '/games/kiaan'
+      preLoaderRoute: typeof GamesKiaanRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/charlie': {
+      id: '/games/charlie'
+      path: '/charlie'
+      fullPath: '/games/charlie'
+      preLoaderRoute: typeof GamesCharlieRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/caden': {
+      id: '/games/caden'
+      path: '/caden'
+      fullPath: '/games/caden'
+      preLoaderRoute: typeof GamesCadenRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/arjun-nipane': {
+      id: '/games/arjun-nipane'
+      path: '/arjun-nipane'
+      fullPath: '/games/arjun-nipane'
+      preLoaderRoute: typeof GamesArjunNipaneRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/ariya': {
+      id: '/games/ariya'
+      path: '/ariya'
+      fullPath: '/games/ariya'
+      preLoaderRoute: typeof GamesAriyaRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/ariha': {
+      id: '/games/ariha'
+      path: '/ariha'
+      fullPath: '/games/ariha'
+      preLoaderRoute: typeof GamesArihaRouteImport
+      parentRoute: typeof GamesRoute
+    }
+    '/games/andrew': {
+      id: '/games/andrew'
+      path: '/andrew'
+      fullPath: '/games/andrew'
+      preLoaderRoute: typeof GamesAndrewRouteImport
+      parentRoute: typeof GamesRoute
+    }
     '/games/adele': {
       id: '/games/adele'
       path: '/adele'
@@ -81,15 +312,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GamesAdeleRouteImport
       parentRoute: typeof GamesRoute
     }
+    '/games/abe': {
+      id: '/games/abe'
+      path: '/abe'
+      fullPath: '/games/abe'
+      preLoaderRoute: typeof GamesAbeRouteImport
+      parentRoute: typeof GamesRoute
+    }
   }
 }
 
 interface GamesRouteChildren {
+  GamesAbeRoute: typeof GamesAbeRoute
   GamesAdeleRoute: typeof GamesAdeleRoute
+  GamesAndrewRoute: typeof GamesAndrewRoute
+  GamesArihaRoute: typeof GamesArihaRoute
+  GamesAriyaRoute: typeof GamesAriyaRoute
+  GamesArjunNipaneRoute: typeof GamesArjunNipaneRoute
+  GamesCadenRoute: typeof GamesCadenRoute
+  GamesCharlieRoute: typeof GamesCharlieRoute
+  GamesKiaanRoute: typeof GamesKiaanRoute
+  GamesLucasTaiRoute: typeof GamesLucasTaiRoute
+  GamesNathanRoute: typeof GamesNathanRoute
+  GamesRevanRoute: typeof GamesRevanRoute
+  GamesShankarRoute: typeof GamesShankarRoute
 }
 
 const GamesRouteChildren: GamesRouteChildren = {
+  GamesAbeRoute: GamesAbeRoute,
   GamesAdeleRoute: GamesAdeleRoute,
+  GamesAndrewRoute: GamesAndrewRoute,
+  GamesArihaRoute: GamesArihaRoute,
+  GamesAriyaRoute: GamesAriyaRoute,
+  GamesArjunNipaneRoute: GamesArjunNipaneRoute,
+  GamesCadenRoute: GamesCadenRoute,
+  GamesCharlieRoute: GamesCharlieRoute,
+  GamesKiaanRoute: GamesKiaanRoute,
+  GamesLucasTaiRoute: GamesLucasTaiRoute,
+  GamesNathanRoute: GamesNathanRoute,
+  GamesRevanRoute: GamesRevanRoute,
+  GamesShankarRoute: GamesShankarRoute,
 }
 
 const GamesRouteWithChildren = GamesRoute._addFileChildren(GamesRouteChildren)
